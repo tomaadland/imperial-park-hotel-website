@@ -58,7 +58,11 @@ module Website
       end
       nil
     end
-
+    
+    def active_link?(route)
+      request.route == route
+    end
+    
     def link_to(text, url=nil, options={}, &block)
       url, text = text, capture_haml(&block) if url.nil?
       options.merge!(:class => 'active') if active_link?(url)
