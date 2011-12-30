@@ -7,8 +7,8 @@
       info@imperialparkhotel.com
   %ul{:class  => "social-nav nav to-right"}
     %li
-      %a{:src  => "#"}
-        English &nbsp; &nbsp;
+      = link_to("English", current_path(:lang => "en"))
+      &nbsp; &nbsp;
     %li
       Follow us &nbsp;
       %span{:class  => "hidden"},
