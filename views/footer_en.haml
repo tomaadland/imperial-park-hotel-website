@@ -7,17 +7,12 @@
       info@imperialparkhotel.com
   %ul{:class  => "social-nav nav to-right"}
     %li
-      %a{:src  => "#"}
-        English &nbsp; &nbsp;
-    %li
-      %a{:src  => "#"}
-        Spanish &nbsp; &nbsp;
+      = link_to("Español", current_path(:lang => "es"))
+      &nbsp; &nbsp;
     %li
       Follow us &nbsp;
-      %a{:src  => "#", :class  => "twitter-icon"}
-        %img{:src  => "/img/content/twitter-icon.png", :alt  => "Twitter"}
       %span{:class  => "hidden"},
-      %a{:src  => "#", :class  => "facebook-icon"}
+      %a{:href  => "http://www.facebook.com/pages/Imperial-Park-Hotel/104210016364842", :target  => "_blank", :class  => "facebook-icon"}
         %img{:src  => "/img/content/facebook-icon.png", :alt  => "facebook"}
 
 
