@@ -37,6 +37,38 @@ module Website
     page "index" do
       haml :index
     end
+    
+    page "rooms" do
+      haml :guest_rooms
+    end
+    
+    page "lounge" do
+      haml :coffee_lounge
+    end
+
+    page "restaurant" do
+      haml :restaurant
+    end
+
+    page "lobby" do
+      haml :lobby
+    end
+
+    page "gym" do
+      haml :gym
+    end
+
+    page "events" do
+      haml :events
+    end
+
+    page "services" do
+      haml :services
+    end
+    
+    page "location" do
+      haml :location
+    end
 
     helpers do
       def partial(page, options={})

@@ -1,25 +1,25 @@
 %ul{:class  => "main nav grid_16 alpha omega"}
   %li{:class  => "current"}
-    %a{:src  => "#"} GUEST ROOMS
+    = link_to("GUEST ROOMS","/#{language}/rooms")
     |
   %li
-    %a{:src  => "#"} COFFEE LOUNGE
+    = link_to("COFEE LOUNGE", "/#{language}/lounge")
     |
   %li
-    %a{:src  => "#"} 101 RESTAURANT
+    = link_to("101 RESTAURANT", "/#{language}/restaurant")
     |
   %li
-    %a{:src  => "#"} LOBBY-PIANO BAR
+    = link_to("LOBBY-PIANO BAR", "/#{language}/lobby")
     |
   %li
-    %a{:src  => "#"} GYM
+    = link_to("GYM", "/#{language}/gym")
     |
   %li
-    %a{:src  => "#"} EVENTS
+    = link_to("EVENTS", "/#{language}/events")
     |
   %li
-    %a{:src  => "#"} SERVICES
+    = link_to("SERVICES", "/#{language}/services")
     |
   %li
-    %a{:src  => "#"} LOCATION
+    = link_to("LOCATION", "/#{language}/location")
 
