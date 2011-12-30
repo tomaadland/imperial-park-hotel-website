@@ -1,0 +1,37 @@
+-# coding: utf-8
+!!!
+%html(lang="en-US")
+  %head
+    %title Imperial Park Hotel 
+    %meta(charset="utf-8")
+   
+    %link{ :rel => "stylesheet", :href => "/css/reset.css", :type  => "text/css" }
+    %link{ :rel => "stylesheet", :href => "/css/base.css", :type => "text/css" }
+    %link{ :rel => "stylesheet", :href => "/css/960.css", :type => "text/css" }
+    %link{ :rel => "stylesheet", :href => "/css/screen.css", :type => "text/css" }
+    %link{ :rel => "stylesheet", :href  => "/css/print.css", :type  => "text/css", :media  => "print" }
+    %link{ :rel => "home", :href => "/" }
+    %link{ :rel  => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Tinos:400,400italic|Bitter&subset=latin,latin-ext" }
+    %script{ :src => "http://code.jquery.com/jquery-1.4.2.min.js" }
+    %script{ :src => "/js/cycle.js" }
+
+  %body{:id => "homepage"}
+    %noscript
+      %p{:class => "message-bar"}
+        Please activate Flash and Javascript in order to see this site full functional.
+      %p{:class => "message-bar browser-support"}
+        Using a modern browser that supports web standards ensures that the site's full visual experience is available. Consider to 
+        %a{ :src =>"http://www.browserchoice.eu" } 
+          upgrade your browser
+        if you are using an older technology.
+
+    #wrapper.container_16
+      #header.grid_16
+        = partial :topbar
+        %div{:class  => "section clearfix"}
+          = partial :logo
+        = partial :main_menu
+        = yield
+        = partial :footer
+
+
