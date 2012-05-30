@@ -10,11 +10,11 @@ module Website
     enable :sessions
 
     LANGUAGES = ["en", "es"]
-    
+
     def self.check_language!
       condition { LANGUAGES.include?(params[:lang]) }
     end
-    
+
     def self.page(path, &block)
       path = "/" + path.gsub(/^\//, '')
 
@@ -28,20 +28,20 @@ module Website
     get "/" do
       redirect language
     end
-    
+
     check_language!
     get "/:lang" do |lang|
       redirect "/#{lang}/index"
     end
-    
+
     page "index" do
       haml :index
     end
-    
+
     page "rooms" do
       haml :guest_rooms
     end
-    
+
     page "lounge" do
       haml :coffee_lounge
     end
@@ -65,9 +65,13 @@ module Website
     page "services" do
       haml :services
     end
-    
+
     page "location" do
       haml :location
+    end
+
+    page "gallery" do
+      haml :gallery, :skip_translation => true
     end
 
     helpers do
@@ -75,7 +79,7 @@ module Website
         haml page, options.merge!(:layout => false)
       end
     end
-    
+
     def language
       @lang ||= params[:lang] || language_from_http || "en"
     end
