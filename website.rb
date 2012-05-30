@@ -9,7 +9,7 @@ module Website
     set :logging, :true
     enable :sessions
 
-    LANGUAGES = ["en", "es"]
+    LANGUAGES = ["en", "es", "pt"]
 
     def self.check_language!
       condition { LANGUAGES.include?(params[:lang]) }
@@ -94,11 +94,11 @@ module Website
       end
       nil
     end
-    
+
     def active_link?(route)
       request.route == route
     end
-    
+
     def link_to(text, url=nil, options={}, &block)
       url, text = text, capture_haml(&block) if url.nil?
       options.merge!(:class => 'active') if active_link?(url)

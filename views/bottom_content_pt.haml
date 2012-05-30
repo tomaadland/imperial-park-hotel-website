@@ -1,0 +1,32 @@
+%div{:id  => "content", :class  => "grid_16"}
+  %div{:class  => "grid_5 alpha"}
+    %h2{:class  => "underline"}
+      Sabor a tango
+    %a{:href => "/img/content/sabor-aviso-1.JPG", :rel => "lightbox", :title => "Se hospedando 03 noites conosco, poderá curtir de um show de tango sem custo em SABOR A TANGO. Bebidas não inclusas."}
+      %img{:src => "/img/content/sabor-aviso-1.JPG",:class => "no-bm", :width => "279", :height => "131"} 
+    %div{:class => "detail"}
+      %img{:src => "/img/content/view.png"}
+      %p
+        Hospendadose 3 noches usted disfrutara del show sin costo en SABOR A TANGO (bebidas no incluidas).
+  %div{:class  => "grid_5 center-box featured-box"}
+    %h2{:class  => "underline"}
+      Disponibilidade e tarifas
+    %a{:href  => "/img/content/imperial-park-rooms/IMG_8626-2.jpg", :rel  => "lightbox-rooms", :title  => "<h2>Deluxe</h2>"}
+      %img{:src  => "/img/content/imperial-park-hotel-rooms.jpg", :alt  => "Imperial Park Hotel rooms", :class  => "no-bm"}
+    %div{:class => "detail"}
+      %img{:src  => "/img/content/bell.png"}
+        %p
+          Oferecemos 50 apartamentos standard e 20 suites.
+  %div{:class  => "grid_5 omega featured-box"}
+    %h2{:class  => "underline"}
+      360 vsitas do hotel
+    %a{:href  => "#"}
+      %img{:src  => "/img/content/imperial-park-hotel-views.jpg",:class  => "no-bm"}
+    %div{:class  => "detail"}
+      %img{:src  => "/img/content/view.png"}
+      %p
+        Uma fotografia que gira 360 com a localizacao do hotel.
+        %a{:href  => "http://360-bue.com.ar/iph",:target  => "_blank", :class  => "button"}
+          360 View
+
+= partial :rooms_images, :skip_translation  => true 
