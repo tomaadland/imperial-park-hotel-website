@@ -1,6 +1,12 @@
 %div{:id  => "content", :class  => "grid_16"}
   %div{:class  => "grid_5 alpha"}
     %h2{:class  => "underline"}
+      Cocktails
+    %a{:href => "/img/content/cocktails/cocktail.jpg", :rel => "lightbox-cocktails", :title => "<h2>Cocktails</h2>"}
+      %img{:src => "/img/content/cocktail-front.jpg", :alt  => "Imperial Park Hotel cocktails", :class => "no-bm"}
+    %div{:class => "detail"}
+      %p
+        Drinks all night long
   %div{:class  => "grid_5 center-box featured-box"}
     %h2{:class  => "underline"}
       Rate and Availability 
@@ -23,3 +29,5 @@
           360 View
 
 = partial :rooms_images, :skip_translation  => true 
+= partial :cocktail_images, :skip_translation => true
+
