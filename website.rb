@@ -5,7 +5,7 @@ require 'haml'
 module Website
   class ImperialPark < Sinatra::Application
     set :root, File.dirname(__FILE__)
-    set :public, File.expand_path("../public", __FILE__)
+    set :public_folder, File.expand_path("../public", __FILE__)
     set :logging, :true
     enable :sessions
 
@@ -96,7 +96,7 @@ module Website
     end
 
     def active_link?(route)
-      request.route == route
+      request.url == route
     end
 
     def link_to(text, url=nil, options={}, &block)
