@@ -10,3 +10,21 @@
 %script{ :src => "/js/cycle.js" }
 %script{ :src => "/slimbox/js/slimbox2.js" }
 
+:javascript
+  var _gaq = _gaq || []; 
+  _gaq.push(['_setAccount', 'UA-2141835-47'], 
+    ['_setDomainName','imperialparkhotel.com'], 
+    ['_setAllowLinker', true], 
+    ['_trackPageview'], 
+    ['b._setAccount', 'UA-28336678-1'], 
+    ['b._trackPageview'] 
+  ); 
+
+  (function() { 
+    var ga =  
+    document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+  })(); 
+
+
