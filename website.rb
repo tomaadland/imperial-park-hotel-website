@@ -6,9 +6,7 @@ module Website
   class ImperialPark < Sinatra::Application
     set :root, File.dirname(__FILE__)
     set :public_folder, File.expand_path("../public", __FILE__)
-    set :logging, :true
-    enable :sessions
-
+    enable :sessions, :logging
     LANGUAGES = ["en", "es", "pt"]
 
     def self.check_language!
@@ -85,7 +83,7 @@ module Website
     end
 
     def current_path(options = {})
-      request.url.gsub(/\/(#{language})/, "/#{options.fetch(:lang, language)}")
+      request.path.gsub(/\/(#{language})/, "/#{options.fetch(:lang, language)}")
     end
 
     def language_from_http
